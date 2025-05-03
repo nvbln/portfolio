@@ -1,0 +1,4 @@
+# Editor-specific files (VS Code, JetBrains, Vim)
+.vscode/
+.idea/
+*.swp
