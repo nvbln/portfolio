@@ -20,16 +20,26 @@
     <!-- TODO: Put style in its own file. -->
     <style>
       @media (min-width: 992px) {
-        .navbar {
-          display: none; /* Hide navbar on larger screens */
+        #main-content {
+          margin-left: 250px;
         }
-        .sidebar {
-          display: flex;
-          flex-direction: column;
-          width: 250px;
-          height: 100vh;
-          position: fixed; background-color: #343a40; color: white; padding: 20px;
-        }
+      }
+
+      .sidebar {
+        flex-direction: column;
+        position: fixed;
+        width: 250px;
+        height: 100vh;
+        background-color: #343a40;
+        color: white;
+        padding: 20px;
+      }
+
+      .sidebar hr {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: var(--bs-nav-link-padding-x);
+        margin-right: var(--bs-nav-link-padding-x);
       }
 
       .flag-font-size {
@@ -74,10 +84,10 @@
   <body>
   
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top d-lg-none">
     <div class="container-fluid">
       <a class="navbar-brand">
-          <img  class="rounded-circle mx-1" src="this_person_does_not_exist.jpg" alt="Profile picture", width="30">
+          <img class="rounded-circle mx-1" src="this_person_does_not_exist.jpg" alt="Profile picture", width="30">
           Firstname Lastname
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -109,31 +119,40 @@
   </nav>
   
   <!-- Sidebar for larger screens -->
-  <div class="sidebar d-none d-lg-flex fixed-top">
-    <h2>Firstname Lastname</h2>
-    <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="nav-link text-light" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" href="#education">Education</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#publications_and_awards">Publications & Awards</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" href="#contact">Contact</a>
-        </li>
+  <div class="sidebar d-none d-lg-flex justify-content-center">
+    <h2 class="text-center">
+      <img class="rounded-circle my-3" src="this_person_does_not_exist.jpg" alt="Profile picture", width="128">
+      Firstname Lastname
+    </h2>
+    <ul class="nav flex-column my-5 fw-bold">
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#about">About</a>
+      </li>
+      <hr>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#projects">Projects</a>
+      </li>
+      <hr>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#education">Education</a>
+      </li>
+      <hr>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#publications_and_awards">Publications & Awards</a>
+      </li>
+      <hr>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#skills">Skills</a>
+      </li>
+      <hr>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#contact">Contact</a>
+      </li>
+      <hr>
     </ul>
   </div>
   
-  <div class="px-3 bg-light">
+  <div id="main-content" class="px-3 bg-light">
     <section id="about" class="d-flex flex-column justify-content-center min-vh-100">
       <h1 class="fw-bold">Firstname Lastname</h1>
       <h4 class="text-secondary">Job title | Lorem ipsum dolor sit amet</h4>
