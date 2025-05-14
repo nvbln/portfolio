@@ -19,29 +19,46 @@
 
     <!-- TODO: Put style in its own file. -->
     <style>
-        @media (min-width: 992px) {
-            .navbar {
-                display: none; /* Hide navbar on larger screens */
-            }
-            .sidebar {
-                display: flex;
-                flex-direction: column;
-                width: 250px;
-                height: 100vh;
-                position: fixed;
-                background-color: #343a40;
-                color: white;
-                padding: 20px;
-            }
+      @media (min-width: 992px) {
+        .navbar {
+          display: none; /* Hide navbar on larger screens */
         }
+        .sidebar {
+          display: flex;
+          flex-direction: column;
+          width: 250px;
+          height: 100vh;
+          position: fixed; background-color: #343a40; color: white; padding: 20px;
+        }
+      }
 
-        .flag-font-size {
-          font-size: 65px
-        }
+      .flag-font-size {
+        font-size: 65px
+      }
 
-        .icon-font-size {
-          font-size: 12px;
+      .icon-font-size {
+        font-size: 12px;
+      }
+  
+      @media (min-width: 400px) {
+        .publications_and_awards_list hr {
+          width: 250px;
         }
+      }
+
+      @media (max-width: 400px) {
+        .publications_and_awards_list hr {
+          width: 50%;
+        }
+      }
+
+      .publications_and_awards_list li {
+        font-size: 17px;
+      }
+
+      .publications_and_awards_list span {
+        font-size: 14px;
+      }
     </style>
   </head>
   <body>
@@ -158,6 +175,37 @@
         <h5 class="text-secondary">New York University</h5>
         <p class="text-muted">GPA: 1.6</p>
         <p class="mt-3 text-muted">Thesis topic: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </section>
+
+    <section class="d-flex flex-column justify-content-center min-vh-100">
+      <h1 class="fw-bold">Publications and Awards</h1>
+      <div class="mt-5">
+        <ul class="publications_and_awards_list fw-bold">
+          <li>
+            1st place with the topic: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+            <br>
+            <span class="text-muted">Lorem ipsum dolor sit amet Hackathon 2024</span>
+          </li>
+          <hr>
+          <li>
+            Poster Presentation: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+            <br>
+            <span class="text-muted">Lorem ipsum dolor sit amet Conference 2023</span>
+          </li>
+          <hr>
+          <li>
+            Paper Publication: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+            <br>
+            <span class="text-muted">Published in Nature Methodology January 2024</span>
+          </li>
+          <hr>
+          <li>
+            3rd place with the topic: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+            <br>
+            <span class="text-muted">Lorem Ipsum Hackathon 2020</span>
+          </li>
+        </ul>
       </div>
     </section>
 
