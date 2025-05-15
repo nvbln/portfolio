@@ -93,16 +93,6 @@
         font-size: 14px;
       }
     </style>
-
-    <!-- TODO: Put this in its own file. -->
-    <script>
-      // Hide the navbar after clicking on any of its elements.
-      document.addEventListener('click', function() {
-        document.querySelectorAll('.navbar .collapse').forEach(function (element) {
-          new bootstrap.Collapse(element).hide();
-        });
-      });
-    </script>
   </head>
   <body>
   
@@ -354,6 +344,17 @@
       </div>
     </section>
   </div>    
+
+  <!-- TODO: Put this in its own file. -->
+  <script>
+    // Hide the navbar after clicking on any of its elements.
+    document.querySelector(".navbar").addEventListener('click', function() {
+      document.querySelectorAll('.navbar .collapse').forEach(function (element) {
+        new bootstrap.Collapse(element).hide();
+      });
+    });
+  </script>
+
   </body>
 </html>
 
