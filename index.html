@@ -19,6 +19,18 @@
 
     <!-- TODO: Put style in its own file. -->
     <style>
+      :root {
+        --bs-primary: #00275b; /* #2f475f; /* Primary colour */
+        --bs-primary-rgb: 0, 39, 91; 
+        --bs-secondary: #ff914c; /* #f57d20; /* Secondary colour */
+        --bs-secondary-rgb: 255 145, 76; 
+        --text-light: #f8f9fa; /* Same color as .text-light */
+      }
+
+      .text-secondary-color {
+        color: var(--bs-secondary);
+      }
+
       @media (min-width: 992px) {
         #main-content {
           margin-left: 250px;
@@ -30,8 +42,7 @@
         position: fixed;
         width: 250px;
         height: 100vh;
-        background-color: #343a40;
-        color: white;
+        color: var(--text-light);
         padding: 20px;
       }
 
@@ -40,6 +51,14 @@
         margin-bottom: 0px;
         margin-left: var(--bs-nav-link-padding-x);
         margin-right: var(--bs-nav-link-padding-x);
+      }
+
+      .sidebar .nav-link, .navbar .nav-link {
+        color: var(--text-light);
+      }
+
+      .sidebar .nav-link:hover, .navbar .nav-link:hover {
+        color: var(--bs-secondary);
       }
 
       .flag-font-size {
@@ -66,6 +85,10 @@
         font-size: 17px;
       }
 
+      .publications_and_awards_list li::marker {
+        color: var(--bs-secondary);
+      }
+
       .publications_and_awards_list span {
         font-size: 14px;
       }
@@ -84,11 +107,11 @@
   <body>
   
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top d-lg-none">
+  <nav class="navbar navbar-dark bg-primary navbar-expand-lg fixed-top d-lg-none">
     <div class="container-fluid">
-      <a class="navbar-brand">
+      <a class="navbar-brand fw-bold">
           <img class="rounded-circle mx-1" src="this_person_does_not_exist.jpg" alt="Profile picture", width="30">
-          Firstname Lastname
+          Firstname <span class="text-secondary-color">Lastname</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -116,30 +139,30 @@
   </nav>
   
   <!-- Sidebar for larger screens -->
-  <div class="sidebar d-none d-lg-flex justify-content-center">
-    <h2 class="text-center">
+  <div class="sidebar bg-primary d-none d-lg-flex justify-content-center">
+    <h2 class="text-center fw-bold">
       <img class="rounded-circle my-3" src="this_person_does_not_exist.jpg" alt="Profile picture", width="128">
-      Firstname Lastname
+      Firstname <span class="text-secondary-color">Lastname</span>
     </h2>
     <ul class="nav flex-column my-5 fw-bold">
       <li class="nav-item">
-        <a class="nav-link text-light" href="#about">About</a>
+        <a class="nav-link" aria-current="page" href="#about">About</a>
       </li>
       <hr>
       <li class="nav-item">
-        <a class="nav-link text-light" href="#projects">Projects</a>
+        <a class="nav-link" href="#projects">Projects</a>
       </li>
       <hr>
       <li class="nav-item">
-        <a class="nav-link text-light" href="#education">Education</a>
+        <a class="nav-link" href="#education">Education</a>
       </li>
       <hr>
       <li class="nav-item">
-        <a class="nav-link text-light" href="#publications_and_awards">Publications & Awards</a>
+        <a class="nav-link" href="#publications_and_awards">Publications & Awards</a>
       </li>
       <hr>
       <li class="nav-item">
-        <a class="nav-link text-light" href="#skills">Skills</a>
+        <a class="nav-link" href="#skills">Skills</a>
       </li>
       <hr>
     </ul>
@@ -147,7 +170,7 @@
   
   <div id="main-content" class="px-3 bg-light">
     <section id="about" class="d-flex flex-column justify-content-center min-vh-100">
-      <h1 class="fw-bold">Firstname Lastname</h1>
+      <h1 class="fw-bold">Firstname <span class="text-secondary-color">Lastname</span></h1>
       <h4 class="text-secondary">Job title | Lorem ipsum dolor sit amet</h4>
       <p class="mt-5 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <div>
@@ -167,7 +190,7 @@
       <h1 class="fw-bold">Projects</h1>
       <div class="mt-5">
         <div class="float-end">
-          <p class="m-0 text-end fw-bold">January 2024 - January 2025</p>
+          <p class="m-0 text-end text-secondary-color">January 2024 - January 2025</p>
           <p class="m-0 text-end">New York, USA</p>
         </div>
         <h3 class="fw-bold">This is a project title</h3>
@@ -177,7 +200,7 @@
 
       <div class="mt-5">
         <div class="float-end">
-          <p class="m-0 text-end fw-bold">January 2024 - January 2025</p>
+          <p class="m-0 text-end text-secondary-color">January 2024 - January 2025</p>
           <p class="m-0 text-end">New York, USA</p>
         </div>
         <h3 class="fw-bold">This is a project title</h3>
@@ -187,7 +210,7 @@
 
       <div class="mt-5">
         <div class="float-end">
-          <p class="m-0 text-end fw-bold">January 2024 - January 2025</p>
+          <p class="m-0 text-end text-secondary-color">January 2024 - January 2025</p>
           <p class="m-0 text-end">New York, USA</p>
         </div>
         <h3 class="fw-bold">This is a project title</h3>
@@ -200,7 +223,7 @@
       <h1 class="fw-bold">Education</h1>
       <div class="mt-5">
         <div class="float-end">
-            <p class="text-end fw-bold">January 2024 - January 2025</p>
+            <p class="text-end text-secondary-color">January 2024 - January 2025</p>
         </div>
         <h4 class="fw-bold">Msc. Computer Science</h4>
         <h5 class="text-secondary">New York University</h5>
@@ -210,7 +233,7 @@
 
       <div class="mt-5">
         <div class="float-end">
-            <p class="text-end fw-bold">January 2024 - January 2025</p>
+            <p class="text-end text-secondary-color">January 2024 - January 2025</p>
         </div>
         <h4 class="fw-bold">Bsc. Computer Science</h4>
         <h5 class="text-secondary">New York University</h5>
