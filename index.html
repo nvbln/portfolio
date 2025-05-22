@@ -31,16 +31,33 @@
         color: var(--bs-secondary);
       }
 
-      @media (min-width: 992px) {
+      @media (min-width: 925px) {
+        .navbar-expand-custom {
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+        }
+
+        .navbar-custom-none {
+          display: none !important;
+        }
+
+        .d-custom-none {
+          display: none !important;
+        }
+
+        .d-custom-flex {
+          display: flex !important;
+        }
+
         #main-content {
-          margin-left: 250px;
+          margin-left: 275px;
         }
       }
 
       .sidebar {
         flex-direction: column;
         position: fixed;
-        width: 250px;
+        width: 275px;
         height: 100vh;
         color: var(--text-light);
         padding: 20px;
@@ -97,7 +114,7 @@
   <body>
   
   <!-- Navbar -->
-  <nav class="navbar navbar-dark bg-primary navbar-expand-lg fixed-top d-lg-none">
+  <nav class="navbar navbar-dark bg-primary navbar-expand-custom fixed-top d-custom-none">
     <div class="container-fluid">
       <a class="navbar-brand fw-bold">
           <img class="rounded-circle mx-1" src="this_person_does_not_exist.jpg" alt="Profile picture", width="30">
@@ -129,7 +146,7 @@
   </nav>
   
   <!-- Sidebar for larger screens -->
-  <div class="sidebar bg-primary d-none d-lg-flex justify-content-center">
+  <div class="sidebar bg-primary d-none d-custom-flex justify-content-center">
     <h2 class="text-center fw-bold">
       <img class="rounded-circle my-3" src="this_person_does_not_exist.jpg" alt="Profile picture", width="128">
       Firstname <span class="text-secondary-color">Lastname</span>
