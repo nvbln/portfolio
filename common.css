@@ -29,14 +29,14 @@
   }
 
   #main-content {
-    margin-left: 275px;
+    margin-left: 260px;
   }
 }
 
 .sidebar {
   flex-direction: column;
   position: fixed;
-  width: 275px;
+  width: 260px;
   height: 100vh;
   color: var(--text-light);
   padding: 20px;
@@ -87,4 +87,30 @@
 
 .publications_and_awards_list span {
   font-size: 14px;
+}
+
+.article {
+  max-width: 650px;
+}
+
+@media (max-width: 576px) {
+  .article {
+    font-size: 17px;
+  }
+} 
+
+@media (min-width: 576px) {
+  .article {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 768px) {
+  .article {
+    font-size: 20px;
+  }
+}
+
+#project-header-image {
+  max-width: 100%; 
 }
