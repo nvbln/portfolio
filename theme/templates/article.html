@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title|striptags  }}{% endblock %}
+
+{% block head %}
+  {{ super() }}
+  
+  {% import 'translations.html' as translations with context %}
+  {% if translations.entry_hreflang(article) %}
+    {{ translations.entry_hreflang(article) }}
+  {% endif %}
+
+  {% if article.description %}
+    <meta name="description" content="{{article.description}}" />
+  {% endif %}
+
+  {% for tag in article.tags %}
+    <meta name="tags" content="{{tag}}" />
+  {% endfor %}
+{% endblock %}
+{% block body %}
+  <div id="main-content" class="px-3 d-flex justify-content-center bg-light">
+      <div class="article d-grid mx-md-5 mx-sm-3 mx-xs-1 fs-xs-5">
+        <h1 class="fw-bold my-5">{{ article.title }}</h1>
+        {{ article.content }}
+      </div>
+  </div>
+{% endblock %} 
