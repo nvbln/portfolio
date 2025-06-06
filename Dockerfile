@@ -16,4 +16,4 @@ WORKDIR /app
 
 EXPOSE 8000
 
-ENTRYPOINT ["sh", "-c", "exec /root/.local/bin/pelican --bind 0.0.0.0 --listen"]
+ENTRYPOINT ["sh", "-c", "exec /root/.local/bin/pelican --bind 0.0.0.0 --listen --autoreload -t /app/theme"]
