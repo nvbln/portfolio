@@ -114,3 +114,36 @@
 #project-header-image {
   max-width: 100%; 
 }
+
+.project-link h3 {
+  transition: color 0.2s ease-in-out;
+}
+
+.project-link:hover h3 {
+  color: var(--bs-secondary);
+}
+
+a.unstyled {
+  all: unset;
+  display: block;
+}
+
+.project-link {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;`
+}
+
+.underline {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--bs-secondary);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.project-link:hover .underline {
+  opacity: 1;
+}
