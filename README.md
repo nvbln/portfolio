@@ -6,7 +6,7 @@ A template I made for portfolio websites using [Pelican](https://getpelican.com/
 
 There are two possible installation methods:
 1. Install a container application like [Docker](https://docs.docker.com/engine/install/) or [Podman](https://podman.io/docs/installation).
-2. Install the [Pelican](https://getpelican.com/](https://getpelican.com/#quickstart) application natively. For this you will need to install either [pipx](https://pipx.pypa.io/stable/installation/) (recommended) or [pip](https://pip.pypa.io/en/stable/installation/). In the case of `pipx`, make sure to replace `pip` with `pipx` in the Pelican installation guide.
+2. Install the [Pelican](https://getpelican.com/#quickstart) application natively. For this you will need to install either [pipx](https://pipx.pypa.io/stable/installation/) (recommended) or [pip](https://pip.pypa.io/en/stable/installation/). In the case of `pipx`, make sure to replace `pip` with `pipx` in the Pelican installation guide.
 
 ### Run
 
