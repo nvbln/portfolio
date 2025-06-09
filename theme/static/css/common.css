@@ -147,3 +147,9 @@ a.unstyled {
 .project-link:hover .underline {
   opacity: 1;
 }
+
+/* Gives the colour normally given to anchors/links */
+.link-text-color {
+  color: #0d6efd;
+}
+
