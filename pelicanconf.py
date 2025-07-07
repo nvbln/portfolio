@@ -1,3 +1,20 @@
+import os
+import yaml
+
+project_summaries_dir = "content/project_summaries"
+proj_summs = []
+
+# Sorting is done by filename.
+for filename in reversed(os.listdir(project_summaries_dir)):
+    if filename.endswith(".yml"):
+        with open(os.path.join(project_summaries_dir, filename), 'r') as f:
+            data = yaml.safe_load(f)
+            proj_summs.append(data)
+
+JINJA_GLOBALS = {
+    'project_summaries': proj_summs
+}
+
 AUTHOR = 'Firstname Lastname'
 SITENAME = 'Firstname Portfolio'
 SITEURL = ""

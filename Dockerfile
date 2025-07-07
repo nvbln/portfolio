@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
 RUN rm -rf /var/lib/apt/lists/*
 
 RUN python3 -m pipx install "pelican[markdown]"
+RUN python3 -m pipx inject pelican pyyaml
 
 WORKDIR /app
 

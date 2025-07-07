@@ -1,0 +1,30 @@
+{# templates/macros/project_macros.html #}
+{% macro base_project(project) %}
+<div class="mt-5">
+  <div class="float-end ms-md-5 ms-sm-3 ms-2">
+    <p class="m-0 text-end text-secondary-color">
+      <span class="d-block d-sm-inline">{{ project.start_date }}</span>
+      <span class="d-block d-sm-inline text-center"> - </span>
+      <span class="d-block d-sm-inline">{{ project.end_date }}</span>
+    </p>
+    <p class="m-0 text-end">{{ project.location }}</p>
+  </div>
+  <h3 class="fw-bold">{{ project.title }}</h3>
+  <h5 class="text-secondary">{{ project.company }}</h5>
+  <p class="mt-3 text-muted">
+    {{ project.summary }}
+    {% if project.link %}
+      <i class="bi bi-box-arrow-up-right link-text-color"></i>
+    {% endif %}
+  </p>
+  <div class="underline"></div>
+</div>
+{% endmacro %}
+
+{% macro linked_project(project) %}
+<a href="{{ project.link }}" class="unstyled">
+  <div class="project-link">
+    {{ base_project(project) }}
+  </div>
+</a>
+{% endmacro %}
