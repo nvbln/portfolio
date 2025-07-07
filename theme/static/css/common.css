@@ -10,6 +10,16 @@
   color: var(--bs-secondary);
 }
 
+/* btn-outline colour still needs to be set explicitly. */
+.btn-outline-secondary {
+  --bs-btn-color: var(--bs-secondary);
+  --bs-btn-border-color: var(--bs-secondary);
+  --bs-btn-hover-bg: var(--bs-secondary);
+  --bs-btn-hover-border-color: var(--bs-secondary);
+  --bs-btn-active-bg: var(--bs-secondary);
+  --bs-btn-active-border-color: var(--bs-secondary);
+}
+
 @media (min-width: 925px) {
   .navbar-expand-custom {
     flex-wrap: nowrap;
