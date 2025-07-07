@@ -1,25 +1,26 @@
 import os
 import yaml
 
-project_summaries_dir = "content/project_summaries"
-proj_summs = []
+PATH = "content"
 
-# Sorting is done by filename.
-for filename in reversed(os.listdir(project_summaries_dir)):
-    if filename.endswith(".yml"):
-        with open(os.path.join(project_summaries_dir, filename), 'r') as f:
-            data = yaml.safe_load(f)
-            proj_summs.append(data)
+def load_files(file_dir):
+    file_dir = PATH + "/" + file_dir
+    all_file_data = []
+    for filename in reversed(os.listdir(file_dir)):
+        if filename.endswith(".yml"):
+            with open(os.path.join(file_dir, filename), 'r') as f:
+                data = yaml.safe_load(f)
+                all_file_data.append(data)
+    return all_file_data
 
 JINJA_GLOBALS = {
-    'project_summaries': proj_summs
+    'project_summaries': load_files("project_summaries"),
+    'education': load_files("education")
 }
 
 AUTHOR = 'Firstname Lastname'
 SITENAME = 'Firstname Portfolio'
 SITEURL = ""
-
-PATH = "content"
 
 TIMEZONE = 'Europe/Rome'
 
