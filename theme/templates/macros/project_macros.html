@@ -22,7 +22,7 @@
   {% else %}
   <div class="d-flex justify-content-end mb-2">
   {% endif %}
-  {% if project.link %}
+  {% if project.slug %}
     <button type="button" class="btn btn-outline-secondary me-3">Read more</button>
   </div>
   {% endif %}
@@ -31,7 +31,7 @@
 {% endmacro %}
 
 {% macro linked_project(project) %}
-<a href="{{ project.link }}" class="unstyled">
+<a href="{{ project.slug }}" class="unstyled">
   <div class="project-link">
     {{ base_project(project) }}
   </div>

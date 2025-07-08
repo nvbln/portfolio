@@ -22,8 +22,9 @@
     
     <section id="projects" class="d-flex flex-column justify-content-center min-vh-100 mb-5">
       <h1 class="fw-bold">Projects</h1>
-      {% for project in project_summaries %}
-        {% if project.link %}
+      {% set projects = project_summaries + articles %}
+      {% for project in projects|sort(attribute='rank') %}
+        {% if project.slug %}
           {{ project_macros.linked_project(project) }}
         {% else %}
           {{ project_macros.base_project(project) }}
