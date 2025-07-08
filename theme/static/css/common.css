@@ -1,23 +1,23 @@
 :root {
   --bs-primary: #00275b; /* Primary colour */
   --bs-primary-rgb: 0, 39, 91; 
-  --bs-secondary: #ff8c00;
-  --bs-secondary-rgb: 255, 140, 0;
+  --secondary-color: #ff8c00;
+  --secondary-color-rgb: 255, 140, 0;
   --text-light: #f8f9fa; /* Same color as .text-light */
 }
 
 .text-secondary-color {
-  color: var(--bs-secondary);
+  color: var(--secondary-color);
 }
 
 /* btn-outline colour still needs to be set explicitly. */
 .btn-outline-secondary {
-  --bs-btn-color: var(--bs-secondary);
-  --bs-btn-border-color: var(--bs-secondary);
-  --bs-btn-hover-bg: var(--bs-secondary);
-  --bs-btn-hover-border-color: var(--bs-secondary);
-  --bs-btn-active-bg: var(--bs-secondary);
-  --bs-btn-active-border-color: var(--bs-secondary);
+  --bs-btn-color: var(--secondary-color);
+  --bs-btn-border-color: var(--secondary-color);
+  --bs-btn-hover-bg: var(--secondary-color);
+  --bs-btn-hover-border-color: var(--secondary-color);
+  --bs-btn-active-bg: var(--secondary-color);
+  --bs-btn-active-border-color: var(--secondary-color);
 }
 
 @media (min-width: 925px) {
@@ -64,7 +64,7 @@
 }
 
 .sidebar .nav-link:hover, .navbar .nav-link:hover {
-  color: var(--bs-secondary);
+  color: var(--secondary-color);
 }
 
 .flag-font-size {
@@ -92,7 +92,7 @@
 }
 
 .publications_and_awards_list li::marker {
-  color: var(--bs-secondary);
+  color: var(--secondary-color);
 }
 
 .publications_and_awards_list span {
@@ -130,7 +130,7 @@
 }
 
 .project-link:hover h3 {
-  color: var(--bs-secondary);
+  color: var(--secondary-color);
 }
 
 a.unstyled {
@@ -149,7 +149,7 @@ a.unstyled {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--bs-secondary);
+  background-color: var(--secondary-color);
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
