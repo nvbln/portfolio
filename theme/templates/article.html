@@ -20,7 +20,16 @@
 {% block body %}
   <div id="main-content" class="px-3 d-flex justify-content-center bg-light">
       <div class="article d-grid mx-md-5 mx-sm-3 mx-xs-1 fs-xs-5">
-        <h1 class="fw-bold my-5">{{ article.title }}</h1>
+        <div class="my-5">
+          <h1 class="fw-bold">{{ article.title }}</h1>
+          {% if article.tags %}
+          <div class="d-flex">
+          {% for tag in article.tags %}
+            <span class="badge bg-light-grey me-1">{{ tag }}</span>
+          {% endfor %}
+          </div>
+          {% endif %}
+        </div>
         {{ article.content }}
       </div>
   </div>

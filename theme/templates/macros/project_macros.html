@@ -11,9 +11,18 @@
   </div>
   <h3 class="fw-bold">{{ project.title }}</h3>
   <h5 class="text-secondary">{{ project.company }}</h5>
-  <p class="mt-3 text-muted">{{ project.summary }}</p>
-  {% if project.link %}
+  <p class="mt-3 text-muted mb-2">{{ project.summary }}</p>
+  {% if project.tags %}
+  <div class="d-flex justify-content-between mb-2">
+    <span>
+    {% for tag in project.tags %}
+      <span class="badge bg-light-grey">{{ tag }}</span>
+    {% endfor %}
+    </span>
+  {% else %}
   <div class="d-flex justify-content-end mb-2">
+  {% endif %}
+  {% if project.link %}
     <button type="button" class="btn btn-outline-secondary me-3">Read more</button>
   </div>
   {% endif %}

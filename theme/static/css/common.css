@@ -144,6 +144,10 @@ a.unstyled {
   cursor: pointer;`
 }
 
+.bg-light-grey {
+  background-color: #b0b0b0;
+}
+
 .underline {
   position: absolute;
   left: 0;
