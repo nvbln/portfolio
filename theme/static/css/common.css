@@ -18,6 +18,7 @@
   --bs-btn-hover-border-color: var(--secondary-color);
   --bs-btn-active-bg: var(--secondary-color);
   --bs-btn-active-border-color: var(--secondary-color);
+  font-size: clamp(0.75rem, 2vw, 1rem);
 }
 
 @media (min-width: 925px) {
@@ -40,6 +41,12 @@
 
   #main-content {
     margin-left: 260px;
+  }
+}
+
+@media (max-width: 925px) {
+  #main-content {
+    margin-top: 50px;
   }
 }
 
